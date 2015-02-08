@@ -22,6 +22,8 @@
     "mariasql": "^0.1.21",
     "mysql": "^2.5.4",
     "pg": "^4.2.0",
-    "sequelize": "^2.0.0-rc8"
+    "sequelize": "^2.0.0-rc1",
+    "sequelize-cli": "^1.2.0",
+    "sqlite3": "^3.0.4"
   }
 }
