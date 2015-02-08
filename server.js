@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var models = require('./app/models/traffic_data');
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
