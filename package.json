@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hitraffic/api-server",
   "dependencies": {
+    "debug": "^2.1.1",
     "express": "^4.11.2",
     "mariasql": "^0.1.21",
     "mysql": "^2.5.4",
@@ -25,5 +26,7 @@
     "sequelize": "^2.0.0-rc8",
     "sqlite3": "^3.0.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sequelize-cli": "^1.2.0"
+  }
 }
