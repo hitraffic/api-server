@@ -1,0 +1,25 @@
+LOG:  database system was shut down at 2015-02-11 18:40:12 HST
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  database "shant3washere" does not exist
+FATAL:  role "postgres" does not exist
+FATAL:  database "shant3washere" does not exist
+FATAL:  database "shant3washere" does not exist
+ERROR:  syntax error at or near "template" at character 1
+STATEMENT:  template=# CREATE USER hitraffic WITH PASSWORD 'password'
+	CREATE USER hitraffic WITH PASSWORD 'password'
+	CREATE USER hitraffic WITH PASSWORD 'password';
+ERROR:  syntax error at or near "-" at character 27
+STATEMENT:  CREATE DATABASE hitraffic -W;
+ERROR:  syntax error at or near "PRIVLIEGES" at character 11
+STATEMENT:  GRANT ALL PRIVLIEGES ON DATABASE hitraffic to hitraffic
+	GRANT ALL PRIVLIEGES ON DATABASE hitraffic to hitraffic
+	GRANT ALL PRIVLIEGES ON DATABASE hitraffic to hitraffic;
+ERROR:  syntax error at or near "PRIVLIEGES" at character 11
+STATEMENT:  GRANT ALL PRIVLIEGES ON DATABASE hitraffic to hitraffic
+	GRANT ALL PRIVLIEGES ON DATABASE hitraffic to hitraffic
+	GRANT ALL PRIVLIEGES ON DATABASE hitraffic to hitraffic;
+ERROR:  role "hitraffic" does not exist
+STATEMENT:  GRANT ALL PRIVILEGES ON DATABASE hitraffic to hitraffic;
+ERROR:  database "hitraffic" already exists
+STATEMENT:  CREATE DATABASE hitraffic;
