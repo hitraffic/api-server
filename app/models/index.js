@@ -20,7 +20,7 @@ sequelize
     }
   });
 
-//fix this 
+// //fix this 
 fs
   .readdirSync(__dirname)
   .filter(function(file) {
@@ -36,6 +36,21 @@ Object.keys(db).forEach(function(modelName) {
     db[modelName].associate(db);
   }
 });
+
+// //Tester ONLY
+// sequelize.sync().then(function() {
+//   return Data.create({
+//     area: "KANEOHE",
+//     location: "PALI TUNNELS D4 S",
+//     address: "600X PALI HWY",
+//     code: "633",
+//     type: "STALLED/HAZARDOUS VEHICLE",
+//     date: new Date(2015, 12, 12)
+//   }).then(function(data) {
+//     console.log(data.values);
+//   });
+// });
+
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
