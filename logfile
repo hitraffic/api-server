@@ -23,3 +23,5 @@ ERROR:  role "hitraffic" does not exist
 STATEMENT:  GRANT ALL PRIVILEGES ON DATABASE hitraffic to hitraffic;
 ERROR:  database "hitraffic" already exists
 STATEMENT:  CREATE DATABASE hitraffic;
+LOG:  incomplete startup packet
+LOG:  incomplete startup packet
