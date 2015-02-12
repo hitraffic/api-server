@@ -4,7 +4,8 @@
   "description": "API Endpoint for Traffic Data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,11 +20,10 @@
   "dependencies": {
     "debug": "^2.1.1",
     "express": "^4.11.2",
-    "mariasql": "^0.1.21",
-    "mysql": "^2.5.4",
     "pg": "^4.2.0",
-    "sequelize": "^2.0.0-rc1",
-    "sequelize-cli": "^1.2.0",
-    "sqlite3": "^3.0.4"
+    "sequelize": "^2.0.0-rc8"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^1.2.0"
   }
 }
