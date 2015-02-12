@@ -34,17 +34,20 @@ module.exports = function(sequelize, Sequelize) {
     }
   });
   // return Data;
-    return sequelize.sync().then(function() {
-      return Data.create({
-        area: "KANEOHE",
-        location: "PALI TUNNELS D4 S",
-        address: "600X PALI HWY",
-        code: "633",
-        type: "STALLED/HAZARDOUS VEHICLE",
-        date: new Date(2015, 12, 12)
-      }).then(function(data) {
-        console.log(data.values);
-      });
-    });
-  };
+  // return sequelize.sync().then(function() {
+  //   return Data.create({
+  //     area: "KANEOHE",
+  //     location: "PALI TUNNELS D4 S",
+  //     address: "600X PALI HWY",
+  //     code: "633",
+  //     type: "STALLED/HAZARDOUS VEHICLE",
+  //     date: new Date(2015, 12, 12)
+  //   }).then(function(data) {
+  //     console.log(data.values);
+  //   });
+  // });
+  $.get( "https://gist.github.com/mrbarbasa/3ac8a072339ed9d25666", function( data ) {
+    console.log('data');
+  });
+};
 
