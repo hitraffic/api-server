@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var request = ('request');
 
 
 var models = require('./app/models/traffic_data');
@@ -7,8 +8,11 @@ require('./app/models/index');
 
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+
+  res.send('Hello World');
 });
+
+>>>>>>> server
 
 var server = app.listen(3000, function () {
 
