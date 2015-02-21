@@ -2,7 +2,8 @@
 
 var Sequelize = require('sequelize');
 var sequelize = new Sequelize('area', 'location', 'address', 'code', 'type', 'date', 'latitude', 'longitude');
-
+var mockData = require('./mock_data.js');
+console.log(mockData);
 
 module.exports = function(sequelize, Sequelize) {
   var Data = sequelize.define('traffic_data', {
@@ -47,4 +48,4 @@ module.exports = function(sequelize, Sequelize) {
       });
     });
   };
-
+//TO DO - send data from gist directly to whoever is trying to access data.
