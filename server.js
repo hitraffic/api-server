@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var request = ('request');
-var Routes = require('./app/routes/traffic_data');
+var router = require('./app/routes/traffic_data');
 
 
 
@@ -21,7 +21,6 @@ var server = app.listen(3000, function () {
 
   console.log('Example app listening at http://%s:%s', host, port);
 
-  console.log(Routes);
-
+  
 });
 

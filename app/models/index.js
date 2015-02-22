@@ -57,17 +57,18 @@ sequelize
     if (!!err) {
       console.log('An error occurred while creating the table:', err);
     } else {
-      incident
+      for(var i = 0; i < mockData.length; i++) {
+         incident
         .create({
-          item: 1,
-          date: 1346281822,
-          code: 633,
-          type: "STALLED/HAZARDOUS VEHICLE",
-          address: "600X PALI HWY",
-          location: "PALI TUNNELS D4 S",
-          area: "KANEOHE",
-          latitude: null,
-          longitude: null
+          item: mockData[i].item,
+          date: mockData[i].date,
+          code: mockData[i].code,
+          type: mockData[i].type,
+          address: mockData[i].address,
+          location: mockData[i].location,
+          area: mockData[i].area,
+          latitude: mockData[i].latitude,
+          longitude: mockData[i].longitude
         })
         .complete(function(err, user) {
           if (!!err) {
@@ -78,6 +79,8 @@ sequelize
         });
       console.log('It worked!');
     }
+      }
+     
   });
 
 

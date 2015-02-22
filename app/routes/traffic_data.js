@@ -5,12 +5,9 @@ var mockData = require('../models/mock_data.js');
 var Incidents = require('../models/traffic_data');
 
 router.get('/', function(req, res) {
-  models.incident.findAll({
-  }).then(function(incidents) {
-    for(var i = 0; i < incidents.length; i++) {
-      res.render(incidents[i].date);
-    }
-  });
+  // query for date by year
+  models.incident
+    .findAll({where: {date: }})
 });
 
 module.exports = router;
