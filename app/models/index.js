@@ -12,6 +12,7 @@ var db        = {};
 var Data = require('./traffic_data.js');
 var mockData = require('./mock_data.js');
 console.log(Data);
+
 sequelize
   .authenticate()
   .complete(function(err) {
@@ -23,32 +24,35 @@ sequelize
   });
 
 var incident = sequelize.define('incident', {
-  date: Sequelize.DATE,
+    id: Sequelize.INTEGER,
+    date: Sequelize.DATE,
     code: Sequelize.INTEGER,
     type: Sequelize.STRING,
     address: Sequelize.STRING,
     location: Sequelize.STRING,
     area: Sequelize.STRING,
-    latitude: {
+    lat: {
       type: Sequelize.FLOAT,
       allowNull: true,
       defaultValue: null,
       validate: { min: -90, max: 90 }
     },
-    longitude: {
+    lng: {
       type: Sequelize.FLOAT,
       allowNull: true,
       defaultValue: null,
       validate: { min: -180, max: 180 }
     },
-  }, {
-    validate: {
-      bothCoordsOrNone: function () {
-        if ((this.latitude === null) === (this.longitude === null)) {
-          throw new Error ('Require either both latitude and longitude or neither');
-        }
-      }
-    }
+  // }, 
+  // {
+  //   validate: {
+  //     bothCoordsOrNone: function (value) {
+  //       console.log(this);
+  //       if ((value.lat === null) === (value.lng === null)) {
+  //         throw new Error ('Require either both latitude and longitude or neither');
+  //       }
+  //     }
+  //   }
   });
 
 sequelize
@@ -59,13 +63,15 @@ sequelize
     } else {
       incident
         .create({
-          item: 1,
+          id: 1,
           date: 1346281822,
           code: 633,
-          type: "STALLED/HAZARDOUS VEHICLE",
+          type: "STALLED/HAZARDOUS VEHICLE",//TO DO
           address: "600X PALI HWY",
           location: "PALI TUNNELS D4 S",
-          area: "KANEOHE"
+          area: "KANEOHE",//TO DO
+          lat: 21.297355,
+          lng: -157.861581
         })
         .complete(function(err, user) {
           if (!!err) {
