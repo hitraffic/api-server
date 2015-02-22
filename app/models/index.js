@@ -41,14 +41,14 @@ var incident = sequelize.define('incident', {
       defaultValue: null,
       validate: { min: -180, max: 180 }
     },
-  }, {
-    validate: {
-      bothCoordsOrNone: function () {
-        if ((this.latitude === null) === (this.longitude === null)) {
-          throw new Error ('Require either both latitude and longitude or neither');
-        }
-      }
-    }
+  // }, {
+  //   validate: {
+  //     bothCoordsOrNone: function () {
+  //       if ((this.latitude === null) === (this.longitude === null)) {
+  //         throw new Error ('Require either both latitude and longitude or neither');
+  //       }
+  //     }
+  //   }
   });
 
 sequelize
@@ -65,7 +65,9 @@ sequelize
           type: "STALLED/HAZARDOUS VEHICLE",
           address: "600X PALI HWY",
           location: "PALI TUNNELS D4 S",
-          area: "KANEOHE"
+          area: "KANEOHE",
+          latitude: null,
+          longitude: null
         })
         .complete(function(err, user) {
           if (!!err) {
