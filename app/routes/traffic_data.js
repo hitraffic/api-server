@@ -20,10 +20,14 @@ router.get('/area/:area', function(req, res) {
 //GET Types
 router.get('/type/:type', function(req, res) {
   console.log(req.param("type"));
+  var types = {
+    stalled: "STALLED/HAZARDOUS VEHICLE",
+    collision: "TRAFFIC INCIDENT - NO COLLISION"
+  };
   models.incident
     .findAll({
       where: {
-        type: req.params.type}
+        type: types[req.params.type]}
     })
     .then(function(incidents) {
       res.json(incidents);
