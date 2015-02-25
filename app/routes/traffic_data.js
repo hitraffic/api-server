@@ -4,18 +4,31 @@ var router = express.Router();
 var Sequelize = require('sequelize');
 var incident = require('../models/traffic_data');
 
-//EJL-Incident
+//GET Area
 router.get('/area/:area', function(req, res) {
   console.log(req.param);
   models.incident
     .findAll({
       where: {
-        area: req.param("area")}
+        area: req.params.area}
       })
     .then(function(incidents){
       res.json(incidents);
     });
   });
+
+//GET Types
+router.get('/type/:type', function(req, res) {
+  console.log(req.param("type"));
+  models.incident
+    .findAll({
+      where: {
+        type: req.params.type}
+    })
+    .then(function(incidents) {
+      res.json(incidents);
+    });
+});
 
 // sequelize.query("SELECT type FROM incident WHERE area = 'incident[i].area", 
 //   { replacements: ['active'], type: sequelize.QueryTypes.SELECT}
