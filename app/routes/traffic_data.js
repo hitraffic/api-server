@@ -21,8 +21,9 @@ router.get('/area/:area', function(req, res) {
 router.get('/type/:type', function(req, res) {
   console.log(req.param("type"));
   var types = {
-    stalled: "STALLED/HAZARDOUS VEHICLE",
-    collision: "TRAFFIC INCIDENT - NO COLLISION"
+    "stalled": "STALLED/HAZARDOUS VEHICLE",
+    "no-collision": "TRAFFIC INCIDENT - NO COLLISION",
+    "nuisance-violation": "TRAFFIC NUISANCE OR PARKING VIOLATION",
   };
   models.incident
     .findAll({
