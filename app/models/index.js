@@ -79,7 +79,7 @@ sequelize
         });
       console.log('It worked!');
     }
-      }
+  }
      
   });
 

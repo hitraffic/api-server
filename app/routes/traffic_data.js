@@ -1,13 +1,19 @@
 var models  = require('../models');
 var express = require('express');
 var router  = express.Router();
-var mockData = require('../models/mock_data.js');
-var Incidents = require('../models/traffic_data');
+var Sequelize = require('sequelize');
+var incident = require('../models/traffic_data');
 
 router.get('/', function(req, res) {
   // query for date by year
   models.incident
-    .findAll({where: {date: }})
+    for(var i = 0; i < incident.length; i++) {
+      sequelize.query("SELECT type FROM incident WHERE area = 'incident[i].area'", {type: sequelize.QueryTypes.SELECT})
+        .then(function(incidentByArea) {
+          console.log('incidents by area: ', incidentByArea);
+          res.json({'incidents by area: ': inidentByArea});
+        })
+    }
 });
 
 module.exports = router;
