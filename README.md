@@ -77,14 +77,14 @@ SPECS:
 This should just return an array, i.e. [‘MOTOR VEHICLE COLLISION’, ‘HAZARDOUS DRIVER’, ‘STALLED/HAZARDOUS VEHICLE’, ‘TRAFFIC INCIDENT - NO COLLISION’, ‘TRAFFIC NUISANCE OR PARKING VIOLATION’].
 The array should contain unique values.
 
-````bash
+
 ROUTES: 
 [localhost:3000](http://localhost:3000/api/type/stalled)
-http://localhost:3000/api/type/no-collision
-http://localhost:3000/api/type/nuisance-violation
-http://localhost:3000/api/type/collision
-http://localhost:3000/api/type/hazardous
-````
+[localhost:3000](http://localhost:3000/api/type/no-collision)
+[localhost:3000](http://localhost:3000/api/type/nuisance-violation)
+[localhost:3000](http://localhost:3000/api/type/collision)
+[localhost:3000](http://localhost:3000/api/type/hazardous)
+
 __________________________________________________________________________
 
 
