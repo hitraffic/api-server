@@ -25,14 +25,16 @@ GET /incidents?from=2014-10-31T23:59:59Z&to=2015-01-01T00:00:00Z - Fetch all inc
 __________________________________________________________________________
 ## GET /incidents/
 
-DESCRIPTION:
-Retrieves all motor vehicle incidents in past 2 years.
+<d1>
+<dt>DESCRIPTION:</dt>
+<dd>Retrieves all motor vehicle incidents in past 2 years.</dd>
 
-SPECS:
-Returns all motor vehicle incidents in 2 years.
+<dt>SPECS:</dt>
+<dd>Returns all motor vehicle incidents in 2 years.</dd>
 
-EXAMPLES:
-http://localhost:3000/api/incidents/
+<dt>EXAMPLES:</dt>
+<dd>http://localhost:3000/api/incidents/</dd>
+</d1>
 __________________________________________________________________________
 ## GET /incidents/latest
 
