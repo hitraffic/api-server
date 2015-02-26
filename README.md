@@ -79,7 +79,7 @@ The array should contain unique values.
 
 
 ROUTES: 
-[localhost:3000](http://localhost:3000/api/type/stalled)
+[localhost:3000](http://localhost:3000/api/type/stalled)[stalled link]
 [localhost:3000](http://localhost:3000/api/type/no-collision)
 [localhost:3000](http://localhost:3000/api/type/nuisance-violation)
 [localhost:3000](http://localhost:3000/api/type/collision)
