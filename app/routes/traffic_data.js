@@ -7,27 +7,11 @@ var incident = require('../models/traffic_data');
 //GET Area
 router.get('/area/:area', function(req, res) {
   console.log(req.param);
-  var areas = {
-    "kakaako": "KAKAAKO",
-    "kailua": "KAILUA", 
-    "pearl-city": "PEARL CITY",
-    "pearl-hbr": "PEARL HBR",
-    "kaneohe": "KANEOHE", 
-    "aiea": "AIEA",
-    "maili": "MAILI", 
-    "nuuanu": "NUUANU", 
-    "honolulu": "HONOLULU", 
-    "kaimuki": "KAIMUKI", 
-    "kalihi": "KALIHI", 
-    "kalaeloa": "KALAELOA", 
-    "airport": "AIRPORT", 
-    "hawaii-kai": "HAWAII KAI"
-  };
   models.incident
     .findAll({
       where: {
-        // area: req.params.area}
-        area: areas[req.params.area]}
+        area: req.params.area.toUpperCase()}
+        // area: areas[req.params.area]}
       })
     .then(function(incidents){
       res.json(incidents);
@@ -53,6 +37,40 @@ router.get('/type/:type', function(req, res) {
       res.json(incidents);
     });
 });
+
+//inside the route
+//GET/incidents
+//calculate the date for 2 years ago(js create date from years ago)
+//going to be a date object
+//after you get, convert to unix timestamp
+//http://repl.it/cAl
+
+
+
+router.get('/incidents', function(req, res) {
+  // console.log(req.param("incidents"));
+  var date = new Date();
+  
+  console.log(date);
+  // function timeConverter(UNIX_timestamp) {
+  //   var a = new Date(UNIX_timestamp*1000);
+  //     var hour = a.getUTCHours();
+  //     var min = a.getUTCMinutes();
+  //     var sec = a.getUTCSeconds();
+  //     var time = hour +':' +min+ ':' +sec;
+  //     return time;
+  // }
+  models.incident
+    .findAll ({
+      where: {
+        incident: req.params.incidents}
+        date.setFullYear(date.getFullYear()-2);
+    })
+    .then(function(incidents) {
+      res.json(incidents);
+    });
+});
+
 
 // sequelize.query("SELECT type FROM incident WHERE area = 'incident[i].area", 
 //   { replacements: ['active'], type: sequelize.QueryTypes.SELECT}
