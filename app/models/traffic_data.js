@@ -8,10 +8,10 @@ module.exports = function (sequelize, Sequelize) {
     item: Sequelize.INTEGER,
     date: Sequelize.DATE,
     code: Sequelize.INTEGER,
-    type: Sequelize.STRING,//TO DO
+    type: Sequelize.STRING,
     address: Sequelize.STRING,
-    location: Sequelize.STRING,//TO DO
-    area: Sequelize.STRING,//TO DO
+    location: Sequelize.STRING,
+    area: Sequelize.STRING,
     lat: Sequelize.FLOAT,
     lng: Sequelize.FLOAT
   });
