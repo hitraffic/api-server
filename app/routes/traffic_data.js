@@ -38,14 +38,6 @@ router.get('/type/:type', function(req, res) {
     });
 });
 
-//inside the route
-//GET/incidents
-//calculate the date for 2 years ago(js create date from years ago)
-//going to be a date object
-//after you get, convert to unix timestamp
-//http://repl.it/cAl
-
-//sequelize greater than
 
 router.get('/incidents', function(req, res) {
   // console.log(req.param("incidents"));
