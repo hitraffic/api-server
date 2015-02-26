@@ -11,7 +11,6 @@ router.get('/area/:area', function(req, res) {
     .findAll({
       where: {
         area: req.params.area.toUpperCase()}
-        // area: areas[req.params.area]}
       })
     .then(function(incidents){
       res.json(incidents);
@@ -49,31 +48,24 @@ router.get('/type/:type', function(req, res) {
 
 router.get('/incidents', function(req, res) {
  
-  models.incident
-    .findAll ({
-      limit: 1000, order: 'date DESC'
-      // where: {
-        // incident: req.params.incidents}, limit: 10
-        // date.setFullYear(date.getFullYear()-2);
-    })
-    .then(function(incidents) {
-      res.json(incidents);
-    });
+  
 });
 
-// get all incidents that occured in the last 2 hours
-// Returns all incidents ordered by date/time descending that occurred in the last 2 hours.
+// get all incidents that occured in the last 4 hours
+// Returns all incidents ordered by date/time descending that occurred in the last 4 hours.
 router.get('/incidents/latest', function(req, res) {
-  
-  // console.log(incident.date);
+
+  var date = new Date();
   models.incident
     .findAll ({
       where: {
-        incident: req.params.incidents}
-        
+        date: {
+          gt: new Date(date.setHours(date.getHours() - 4))
+        }
+      }
     })
     .then(function(incidents) {
-      // res.json(incidents);
+      res.json(incidents);
     });
 });
 
