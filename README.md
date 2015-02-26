@@ -51,14 +51,15 @@ __________________________________________________________________________
 __________________________________________________________________________
 ## GET /areas
 
-DESCRIPTION:
-Fetches all areas in the database.
+<d1>
+<dt>DESCRIPTION:</dt>
+<dd>Fetches all areas in the database.</dd>
 
-SPECS:
-This should just return an array, i.e. [‘HONOLULU’, ‘KANEOHE’, ‘PEARL CITY’].
-The array should contain unique values, i.e., don’t list ‘Honolulu’ twice.
+<dt>SPECS:</dt>
+<dd>This should just return an array, i.e. [‘HONOLULU’, ‘KANEOHE’, ‘PEARL CITY’].</dd>
+<dd>The array should contain unique values, i.e., don’t list ‘Honolulu’ twice.</dd>
 
-ROUTES:
+<dt>ROUTES:</dt>
 http://localhost:3000/api/area/kakaako
 http://localhost:3000/api/area/kailua
 http://localhost:3000/api/area/pearl-city
@@ -73,24 +74,26 @@ http://localhost:3000/api/area/kalihi
 http://localhost:3000/api/area/kalaeloa
 http://localhost:3000/api/area/airport
 http://localhost:3000/api/area/hawaii-kai
+</d1>
 __________________________________________________________________________
 ## GET /types
 
-DESCRIPTION:
-Fetches all incident types.
+<d1>
+<dt>DESCRIPTION:</dt>
+<dd>Fetches all incident types.</dd>
 
-SPECS:
-This should just return an array, i.e. [‘MOTOR VEHICLE COLLISION’, ‘HAZARDOUS DRIVER’, ‘STALLED/HAZARDOUS VEHICLE’, ‘TRAFFIC INCIDENT - NO COLLISION’, ‘TRAFFIC NUISANCE OR PARKING VIOLATION’].
-The array should contain unique values.
+<dt>SPECS:</dt>
+<dd>This should just return an array, i.e. [‘MOTOR VEHICLE COLLISION’, ‘HAZARDOUS DRIVER’, ‘STALLED/HAZARDOUS VEHICLE’, ‘TRAFFIC INCIDENT - NO COLLISION’, ‘TRAFFIC NUISANCE OR PARKING VIOLATION’].</dd>
+<dd>The array should contain unique values.</dd>
 
 
-ROUTES: 
-[localhost:3000](http://localhost:3000/api/type/stalled)[stalled link]
-[localhost:3000](http://localhost:3000/api/type/no-collision)
-[localhost:3000](http://localhost:3000/api/type/nuisance-violation)
-[localhost:3000](http://localhost:3000/api/type/collision)
-[localhost:3000](http://localhost:3000/api/type/hazardous)
-
+<dt>ROUTES:</dt>
+<dd>[localhost:3000](http://localhost:3000/api/type/stalled)[stalled link]</dd>
+<dd>[localhost:3000](http://localhost:3000/api/type/no-collision)</dd>
+<dd>[localhost:3000](http://localhost:3000/api/type/nuisance-violation)</dd>
+<dd>[localhost:3000](http://localhost:3000/api/type/collision)</dd>
+<dd>[localhost:3000](http://localhost:3000/api/type/hazardous)</dd>
+</d1>
 __________________________________________________________________________
 
 
