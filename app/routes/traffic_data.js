@@ -58,9 +58,10 @@ router.get('/incidents/latest', function(req, res) {
   var date = new Date();
   models.incident
     .findAll ({
+      limit: 1000, order: 'date DESC',
       where: {
         date: {
-          gt: new Date(date.setHours(date.getHours() - 4))
+          lte: new Date(date.setHours(date.getHours() - 4))
         }
       }
     })
