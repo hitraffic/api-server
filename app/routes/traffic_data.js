@@ -51,7 +51,7 @@ router.get('/incidents', function(req, res) {
  
   models.incident
     .findAll ({
-      limit: 10, order: 'date DESC'
+      limit: 1000, order: 'date DESC'
       // where: {
         // incident: req.params.incidents}, limit: 10
         // date.setFullYear(date.getFullYear()-2);
