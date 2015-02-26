@@ -1,7 +1,7 @@
 # api-server
 
 * API Endpoint for Traffic Data
-__________________________________________________________________________
+
 ## GET /incidents
 
 DESCRIPTION:
