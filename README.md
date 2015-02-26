@@ -38,14 +38,16 @@ __________________________________________________________________________
 __________________________________________________________________________
 ## GET /incidents/latest
 
-DESCRIPTION:
-Get all incidents that occurred in the last 4 hours.
+<d1>
+<dt>DESCRIPTION:</dt>
+<dd>Get all incidents that occurred in the last 4 hours.</dd>
 
-SPECS:
-Returns all incidents ordered by date/time descending that occurred in the last 4 hours.
+<dt>SPECS:</dt>
+<dd>Returns all incidents ordered by date/time descending that occurred in the last 4 hours.</dd>
 
-EXAMPLES:
-http://localhost:3000/api/incidents/latest
+<dt>EXAMPLES:</dt>
+<dd>http://localhost:3000/api/incidents/latest</dd>
+</d1>
 __________________________________________________________________________
 ## GET /areas
 
