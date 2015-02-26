@@ -33,7 +33,7 @@ __________________________________________________________________________
 <dd>Returns all motor vehicle incidents in 2 years.</dd>
 
 <dt>EXAMPLES:</dt>
-<dd>http://localhost:3000/api/incidents/</dd>
+<dd>[incidents](http://localhost:3000/api/incidents/)</dd>
 </d1>
 __________________________________________________________________________
 ## GET /incidents/latest
@@ -46,7 +46,7 @@ __________________________________________________________________________
 <dd>Returns all incidents ordered by date/time descending that occurred in the last 4 hours.</dd>
 
 <dt>EXAMPLES:</dt>
-<dd>http://localhost:3000/api/incidents/latest</dd>
+<dd>[incidents/latest](http://localhost:3000/api/incidents/latest)</dd>
 </d1>
 __________________________________________________________________________
 ## GET /areas
@@ -60,7 +60,6 @@ __________________________________________________________________________
 <dd>The array should contain unique values, i.e., don’t list ‘Honolulu’ twice.</dd>
 
 <dt>ROUTES:</dt>
-
 __________________________________________________________________________
 ## GET /types
 
@@ -71,7 +70,6 @@ __________________________________________________________________________
 <dt>SPECS:</dt>
 <dd>This should just return an array, i.e. [‘MOTOR VEHICLE COLLISION’, ‘HAZARDOUS DRIVER’, ‘STALLED/HAZARDOUS VEHICLE’, ‘TRAFFIC INCIDENT - NO COLLISION’, ‘TRAFFIC NUISANCE OR PARKING VIOLATION’].</dd>
 <dd>The array should contain unique values.</dd>
-
 
 <dt>ROUTES:</dt>
 <dd>[type/stalled](http://localhost:3000/api/type/stalled)</dd>
