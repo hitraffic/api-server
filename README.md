@@ -88,11 +88,11 @@ __________________________________________________________________________
 
 
 <dt>ROUTES:</dt>
-<dd>[type/stalled](http://localhost:3000/api/type/stalled)[stalled link]</dd>
-<dd>[localhost:3000](http://localhost:3000/api/type/no-collision)</dd>
-<dd>[localhost:3000](http://localhost:3000/api/type/nuisance-violation)</dd>
-<dd>[localhost:3000](http://localhost:3000/api/type/collision)</dd>
-<dd>[localhost:3000](http://localhost:3000/api/type/hazardous)</dd>
+<dd>[type/stalled](http://localhost:3000/api/type/stalled)</dd>
+<dd>[type/no-collision](http://localhost:3000/api/type/no-collision)</dd>
+<dd>[type/nuisance-violation](http://localhost:3000/api/type/nuisance-violation)</dd>
+<dd>[type/collision](http://localhost:3000/api/type/collision)</dd>
+<dd>[type/hazardous](http://localhost:3000/api/type/hazardous)</dd>
 </d1>
 __________________________________________________________________________
 
