@@ -1,6 +1,6 @@
 "use strict";
 
-// console.log(mockData);
+
 
 module.exports = function (sequelize, Sequelize) {
 
@@ -17,4 +17,3 @@ module.exports = function (sequelize, Sequelize) {
   });
   return incident;
 };
-
