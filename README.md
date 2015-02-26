@@ -32,7 +32,7 @@ __________________________________________________________________________
 <dt>SPECS:</dt>
 <dd>Returns all motor vehicle incidents in 2 years.</dd>
 
-<dt>EXAMPLES:</dt>
+<dt>ROUTES:</dt>
 <dd>[incidents](http://localhost:3000/api/incidents/)</dd>
 </d1>
 __________________________________________________________________________
@@ -45,7 +45,7 @@ __________________________________________________________________________
 <dt>SPECS:</dt>
 <dd>Returns all incidents ordered by date/time descending that occurred in the last 4 hours.</dd>
 
-<dt>EXAMPLES:</dt>
+<dt>ROUTES:</dt>
 <dd>[incidents/latest](http://localhost:3000/api/incidents/latest)</dd>
 </d1>
 __________________________________________________________________________
