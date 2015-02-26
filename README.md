@@ -52,7 +52,7 @@ SPECS:
 This should just return an array, i.e. [‘HONOLULU’, ‘KANEOHE’, ‘PEARL CITY’].
 The array should contain unique values, i.e., don’t list ‘Honolulu’ twice.
 
-ROUTES: (Completed)
+ROUTES:
 http://localhost:3000/api/area/kakaako
 http://localhost:3000/api/area/kailua
 http://localhost:3000/api/area/pearl-city
@@ -77,8 +77,8 @@ SPECS:
 This should just return an array, i.e. [‘MOTOR VEHICLE COLLISION’, ‘HAZARDOUS DRIVER’, ‘STALLED/HAZARDOUS VEHICLE’, ‘TRAFFIC INCIDENT - NO COLLISION’, ‘TRAFFIC NUISANCE OR PARKING VIOLATION’].
 The array should contain unique values.
 
-ROUTES: (Completed)
-http://localhost:3000/api/type/stalled
+ROUTES: 
+[localhost:3000](http://localhost:3000/api/type/stalled)
 http://localhost:3000/api/type/no-collision
 http://localhost:3000/api/type/nuisance-violation
 http://localhost:3000/api/type/collision
