@@ -9,7 +9,7 @@
 <dd>The default route.</dd>
 
 <dt>SPECS:</dt>
-<dd>* URL may contain one or more of the following query parameters:</dd>
+..* URL may contain one or more of the following query parameters:
 </d1>
 
 from: Fetch incidents beginning from this date.  Should be in a unix timestamp format.
