@@ -1,8 +1,8 @@
 # api-server
 
-API Endpoint for Traffic Data
+* API Endpoint for Traffic Data
 
-GET /route
+## GET /route
 
 DESCRIPTION:
 A single phrase/sentence description of what the route retrieves.
