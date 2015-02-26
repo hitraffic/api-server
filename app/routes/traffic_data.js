@@ -48,63 +48,35 @@ router.get('/type/:type', function(req, res) {
 
 
 router.get('/incidents', function(req, res) {
-  // console.log(req.param("incidents"));
-  var date = new Date();
-  
-  console.log(date);
-  // function timeConverter(UNIX_timestamp) {
-  //   var a = new Date(UNIX_timestamp*1000);
-  //     var hour = a.getUTCHours();
-  //     var min = a.getUTCMinutes();
-  //     var sec = a.getUTCSeconds();
-  //     var time = hour +':' +min+ ':' +sec;
-  //     return time;
-  // }
+ 
   models.incident
     .findAll ({
-      where: {
-        incident: req.params.incidents}
-        date.setFullYear(date.getFullYear()-2);
+      limit: 10, order: 'date DESC'
+      // where: {
+        // incident: req.params.incidents}, limit: 10
+        // date.setFullYear(date.getFullYear()-2);
     })
     .then(function(incidents) {
       res.json(incidents);
     });
 });
 
+// get all incidents that occured in the last 2 hours
+// Returns all incidents ordered by date/time descending that occurred in the last 2 hours.
+router.get('/incidents/latest', function(req, res) {
+  
+  // console.log(incident.date);
+  models.incident
+    .findAll ({
+      where: {
+        incident: req.params.incidents}
+        
+    })
+    .then(function(incidents) {
+      // res.json(incidents);
+    });
+});
 
-// sequelize.query("SELECT type FROM incident WHERE area = 'incident[i].area", 
-//   { replacements: ['active'], type: sequelize.QueryTypes.SELECT}
-//     ).then(function(incidentByArea) {
-//       console.log('incidents by area: ', incidentByArea);
-//   });
 
-// Session.find({
-//   where: ['user_id=? or token=? or expires > NOW()', someNumber, someString] 
-// }).on('success', function(s) {
-
-// });
-
-// Session.find({
-//   where: {id: incident},
-//   include: {type: mockData, location: mockData, area: mockData}
-// });
-
-// var Data = function (sequelize, Sequelize) {
-
-//   Data.findOrCreate({
-//     where: {
-//       type: mockData,
-//       location: mockData,
-//       area: mockData
-//     },
-//     defaults: {
-
-//     }
-//   }).spread(function(data, incident) {
-//     console.log(data.values);
-//   }).fail(function(err) {
-//     console.log('Error occured', err);
-//   });
-// };
 
 module.exports = router;

@@ -10,102 +10,10 @@ var sequelize = new Sequelize(config.database, config.username, config.password,
 var db        = {};
 
 var Data = require('./traffic_data.js');
-// var mockData = require('./mock_data.js');
+var mockData = require('../data/mock_data.js');
 
-<<<<<<< HEAD
-var incident = sequelize.define('incident', {
-  date: Sequelize.DATE,
-    code: Sequelize.INTEGER,
-    type: Sequelize.STRING,
-    address: Sequelize.STRING,
-    location: Sequelize.STRING,
-    area: Sequelize.STRING,
-    latitude: {
-      type: Sequelize.FLOAT,
-      allowNull: true,
-      defaultValue: null,
-      validate: { min: -90, max: 90 }
-    },
-    longitude: {
-      type: Sequelize.FLOAT,
-      allowNull: true,
-      defaultValue: null,
-      validate: { min: -180, max: 180 }
-    },
-  // }, {
-  //   validate: {
-  //     bothCoordsOrNone: function () {
-  //       if ((this.latitude === null) === (this.longitude === null)) {
-  //         throw new Error ('Require either both latitude and longitude or neither');
-  //       }
-  //     }
-  //   }
-  });
 
-sequelize
-  .sync({ force: true })    // drops all tables everytime we run
-  .complete(function(err) {
-    if (!!err) {
-      console.log('An error occurred while creating the table:', err);
-    } else {
-      for(var i = 0; i < mockData.length; i++) {
-         incident
-        .create({
-          item: mockData[i].item,
-          date: mockData[i].date,
-          code: mockData[i].code,
-          type: mockData[i].type,
-          address: mockData[i].address,
-          location: mockData[i].location,
-          area: mockData[i].area,
-          latitude: mockData[i].latitude,
-          longitude: mockData[i].longitude
-        })
-        .complete(function(err, user) {
-          if (!!err) {
-            console.log('The instance has not been saved:', err);
-          } else {
-            console.log('We have a persisted instance now');
-          }
-        });
-      console.log('It worked!');
-    }
-  }
-     
-  });
-=======
 
-// sequelize
-//   .sync({ force: true })    // drops all tables everytime we run
-//   .complete(function(err) {
-//     if (!!err) {
-//       console.log('An error occurred while creating the table:', err);
-//     } else {
-//       for(var i = 0; i < mockData.length; i++) {
-//         incident
-//         .create({
-//           item: mockData[i].item,
-//           date: mockData[i].date,
-//           code: mockData[i].code,
-//           type: mockData[i].type,//TO DO
-//           address: mockData[i].address,
-//           location: mockData[i].location,//TO DO
-//           area: mockData[i].area,//TO DO
-//           latitude: mockData[i].latitude,
-//           longitude: mockData[i].longitude
-//         })
-//         .complete(function(err, user) {
-//           if (!!err) {
-//             console.log('The instance has not been saved:', err);
-//           } else {
-//             console.log('We have a persisted instance now');
-//           }
-//         });
-//       console.log('It worked!');
-//     }
-//   }
-// });
->>>>>>> master
 
 fs
   .readdirSync(__dirname)
@@ -122,6 +30,38 @@ Object.keys(db).forEach(function(modelName) {
     db[modelName].associate(db);
   }
 });
+
+// sequelize
+//   .sync({ force: true })    // drops all tables everytime we run
+//   .complete(function(err) {
+//     if (!!err) {
+//       console.log('An error occurred while creating the table:', err);
+//     } else {
+//       for(var i = 0; i < mockData.length; i++) {
+//          db.incident
+//         .create({
+//           item: mockData[i].item,
+//           date: mockData[i].date,
+//           code: mockData[i].code,
+//           type: mockData[i].type,
+//           address: mockData[i].address,
+//           location: mockData[i].location,
+//           area: mockData[i].area,
+//           latitude: mockData[i].latitude,
+//           longitude: mockData[i].longitude
+//         })
+//         .complete(function(err, user) {
+//           if (!!err) {
+//             console.log('The instance has not been saved:', err);
+//           } else {
+//             console.log('We have a persisted instance now');
+//           }
+//         });
+//       console.log('It worked!');
+//     }
+//       }
+     
+//   });
 
 // db.Data
 //   .sync({ force: true})
