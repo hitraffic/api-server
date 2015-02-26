@@ -45,66 +45,24 @@ router.get('/type/:type', function(req, res) {
 //after you get, convert to unix timestamp
 //http://repl.it/cAl
 
-
+//sequelize greater than
 
 router.get('/incidents', function(req, res) {
   // console.log(req.param("incidents"));
   var date = new Date();
   
-  console.log(date);
-  // function timeConverter(UNIX_timestamp) {
-  //   var a = new Date(UNIX_timestamp*1000);
-  //     var hour = a.getUTCHours();
-  //     var min = a.getUTCMinutes();
-  //     var sec = a.getUTCSeconds();
-  //     var time = hour +':' +min+ ':' +sec;
-  //     return time;
-  // }
-  models.incident
-    .findAll ({
-      where: {
-        incident: req.params.incidents}
-        date.setFullYear(date.getFullYear()-2);
-    })
-    .then(function(incidents) {
-      res.json(incidents);
-    });
-});
-
-
-// sequelize.query("SELECT type FROM incident WHERE area = 'incident[i].area", 
-//   { replacements: ['active'], type: sequelize.QueryTypes.SELECT}
-//     ).then(function(incidentByArea) {
-//       console.log('incidents by area: ', incidentByArea);
-//   });
-
-// Session.find({
-//   where: ['user_id=? or token=? or expires > NOW()', someNumber, someString] 
-// }).on('success', function(s) {
-
-// });
-
-// Session.find({
-//   where: {id: incident},
-//   include: {type: mockData, location: mockData, area: mockData}
-// });
-
-// var Data = function (sequelize, Sequelize) {
-
-//   Data.findOrCreate({
-//     where: {
-//       type: mockData,
-//       location: mockData,
-//       area: mockData
-//     },
-//     defaults: {
-
-//     }
-//   }).spread(function(data, incident) {
-//     console.log(data.values);
-//   }).fail(function(err) {
-//     console.log('Error occured', err);
-//   });
-// };
+    console.log(date);
+    models.incident
+      .findAll ({
+        where: {
+          date: {
+            gt: new Date(date.setFullYear(date.getFullYear()-2))
+          }
+        }
+      })
+      .then(function(incidents) {
+        res.json(incidents);
+      });
+  });
 
 module.exports = router;
