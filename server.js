@@ -1,12 +1,12 @@
 var express = require('express');
 var app = express();
+var models = require('./app/models/index');
 
-var models = require('./app/models/traffic_data');
-require('./app/models/index');
+// app.get('/', function (req, res) {
+//   res.send('Hello World!');
+// });
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+app.use('/api', require('./app/routes/traffic_data'));
 
 var server = app.listen(3000, function () {
 
