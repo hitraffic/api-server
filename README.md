@@ -4,11 +4,13 @@
 
 ## GET /incidents
 
-DESCRIPTION:
-The default route. 
+<d1>
+<dt>DESCRIPTION:</dt>
+<dd>The default route.</dd>
 
-SPECS:
-* URL may contain one or more of the following query parameters:
+<dt>SPECS:</dt>
+<dd>* URL may contain one or more of the following query parameters:</dd>
+</d1>
 
 from: Fetch incidents beginning from this date.  Should be in a unix timestamp format.
 to: Fetch incidents up to this date.  Should be in a unix timestamp format.
