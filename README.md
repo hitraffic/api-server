@@ -60,21 +60,7 @@ __________________________________________________________________________
 <dd>The array should contain unique values, i.e., don’t list ‘Honolulu’ twice.</dd>
 
 <dt>ROUTES:</dt>
-http://localhost:3000/api/area/kakaako
-http://localhost:3000/api/area/kailua
-http://localhost:3000/api/area/pearl-city
-http://localhost:3000/api/area/pearl-hbr
-http://localhost:3000/api/area/kaneohe
-http://localhost:3000/api/area/aiea
-http://localhost:3000/api/area/maili
-http://localhost:3000/api/area/nuuanu
-http://localhost:3000/api/area/honolulu
-http://localhost:3000/api/area/kaimuki
-http://localhost:3000/api/area/kalihi
-http://localhost:3000/api/area/kalaeloa
-http://localhost:3000/api/area/airport
-http://localhost:3000/api/area/hawaii-kai
-</d1>
+
 __________________________________________________________________________
 ## GET /types
 
