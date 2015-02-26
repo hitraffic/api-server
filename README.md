@@ -88,7 +88,7 @@ __________________________________________________________________________
 
 
 <dt>ROUTES:</dt>
-<dd>[localhost:3000](http://localhost:3000/api/type/stalled)[stalled link]</dd>
+<dd>[type/stalled](http://localhost:3000/api/type/stalled)[stalled link]</dd>
 <dd>[localhost:3000](http://localhost:3000/api/type/no-collision)</dd>
 <dd>[localhost:3000](http://localhost:3000/api/type/nuisance-violation)</dd>
 <dd>[localhost:3000](http://localhost:3000/api/type/collision)</dd>
