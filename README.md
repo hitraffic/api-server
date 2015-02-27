@@ -12,7 +12,7 @@
 >  URL may contain one or more of the following query parameters:
 </d1>
 
-<dd>from: Fetch incidents beginning from this date.  Should be in a unix timestamp format.</dd>
+-- from: Fetch incidents beginning from this date.  Should be in a unix timestamp format.</dd>
 <dd>to: Fetch incidents up to this date.  Should be in a unix timestamp format.</dd>
 <dd>area: Area as defined by GET /areas</dd>
 <dd>type: Incident type as defined by GET /types</dd>
