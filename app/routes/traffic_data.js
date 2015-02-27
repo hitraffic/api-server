@@ -52,7 +52,7 @@ router.get('/incidents', function(req, res) {
         res.json(incidents);
       });
   });
-});
+
 
 // get all incidents that occured in the last 4 hours
 // Returns all incidents ordered by date/time descending that occurred in the last 4 hours.

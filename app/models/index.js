@@ -48,6 +48,22 @@ var mockData = require('../data/mock_data.js');
      
 //   });
 
+fs
+  .readdirSync(__dirname)
+  .filter(function(file) {
+    return (file.indexOf(".") !== 0) && (file !== basename);
+  })
+  .forEach(function(file) {
+    var model = sequelize["import"](path.join(__dirname, file));
+    db[model.name] = model;
+  });
+
+Object.keys(db).forEach(function(modelName) {
+  if ("associate" in db[modelName]) {
+    db[modelName].associate(db);
+  }
+});
+
 // db.Data
 //   .sync({ force: true})
 //   .success(function() {
