@@ -30,13 +30,13 @@ __________________________________________________________________________
 ## GET /incidents/
 
 <d1>
-<dt>DESCRIPTION:</dt>
+<dt><strong>DESCRIPTION:</strong></dt>
 <dd>Retrieves all motor vehicle incidents in past 2 years.</dd>
 
-<dt>SPECS:</dt>
+<dt><strong>SPECS:</strong></dt>
 <dd>Returns all motor vehicle incidents in 2 years.</dd>
 
-<dt>ROUTES:</dt>
+<dt><strong>ROUTES:</strong></dt>
 <dd>[incidents](http://localhost:3000/api/incidents/)</dd>
 </d1>
 __________________________________________________________________________
