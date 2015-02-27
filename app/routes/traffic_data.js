@@ -4,9 +4,6 @@ var router  = express.Router();
 var Sequelize = require('sequelize');
 var incident = require('../models/traffic_data');
 
-router.get('/', function(req, res) {
-  
-});
 
 //GET Area
 router.get('/area/:area', function(req, res) {
@@ -67,7 +64,7 @@ router.get('/incidents/latest', function(req, res) {
       limit: 1000, order: 'date DESC',
       where: {
         date: {
-          lte: new Date(date.setHours(date.getHours() - 4))
+          gt: new Date(date.setHours(date.getHours() - 4))
         }
       }
     })
