@@ -12,10 +12,12 @@
 >  URL may contain one or more of the following query parameters:
 </d1>
 
--- from: Fetch incidents beginning from this date.  Should be in a unix timestamp format.</dd>
-<dd>to: Fetch incidents up to this date.  Should be in a unix timestamp format.</dd>
-<dd>area: Area as defined by GET /areas</dd>
-<dd>type: Incident type as defined by GET /types</dd>
+<ol>
+<li>from: Fetch incidents beginning from this date.  Should be in a unix timestamp format.</li>
+<li>to: Fetch incidents up to this date.  Should be in a unix timestamp format.</li>
+<li>area: Area as defined by GET /areas</li>
+<li>type: Incident type as defined by GET /types</li>
+</ol>
 
 EXAMPLES:
 GET /incidents?from=2014-10-31T23:59:59Z - Fetch all incidents that happened since 10/31/2014 11:59:59PM.
