@@ -4,6 +4,10 @@ var router  = express.Router();
 var Sequelize = require('sequelize');
 var incident = require('../models/traffic_data');
 
+router.get('/', function(req, res) {
+  
+});
+
 //GET Area
 router.get('/area/:area', function(req, res) {
   console.log(req.param);
