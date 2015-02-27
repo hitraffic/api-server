@@ -5,7 +5,7 @@
 ## GET /incidents
 
 <d1>
-<dt>DESCRIPTION:</dt>
+<dt><strong>DESCRIPTION:</strong></dt>
 <dd>The default route.</dd>
 
 <dt>SPECS:</dt>
