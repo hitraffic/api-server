@@ -24,8 +24,10 @@
 </d1>
 
 ```bash
-GET /incidents?from=2014-10-31T23:59:59Z - Fetch all incidents that happened since 10/31/2014 11:59:59PM.
-GET /incidents?from=2014-10-31T23:59:59Z&to=2015-01-01T00:00:00Z - Fetch all incidents that happened between 10/31/2014 11:59:59PM and 1/1/2015 12:00:00AM.
+GET /incidents?from=2014-10-31T23:59:59Z 
+- Fetch all incidents that happened since 10/31/2014 11:59:59PM.
+GET /incidents?from=2014-10-31T23:59:59Z&to=2015-01-01T00:00:00Z 
+- Fetch all incidents that happened between 10/31/2014 11:59:59PM and 1/1/2015 12:00:00AM.
 ```
 __________________________________________________________________________
 ## GET /incidents/
