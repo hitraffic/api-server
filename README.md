@@ -16,6 +16,7 @@
 <dd>to: Fetch incidents up to this date.  Should be in a unix timestamp format.</dd>
 <dd>area: Area as defined by GET /areas</dd>
 <dd>type: Incident type as defined by GET /types</dd>
+--
 
 EXAMPLES:
 GET /incidents?from=2014-10-31T23:59:59Z - Fetch all incidents that happened since 10/31/2014 11:59:59PM.
