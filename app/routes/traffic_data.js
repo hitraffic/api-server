@@ -1,8 +1,9 @@
-var models = require('../models');
+var models  = require('../models');
 var express = require('express');
-var router = express.Router();
+var router  = express.Router();
 var Sequelize = require('sequelize');
 var incident = require('../models/traffic_data');
+
 
 //GET Area
 router.get('/area/:area', function(req, res) {
@@ -11,7 +12,6 @@ router.get('/area/:area', function(req, res) {
     .findAll({
       where: {
         area: req.params.area.toUpperCase()}
-        // area: areas[req.params.area]}
       })
     .then(function(incidents){
       res.json(incidents);
@@ -40,10 +40,6 @@ router.get('/type/:type', function(req, res) {
 
 
 router.get('/incidents', function(req, res) {
-  // console.log(req.param("incidents"));
-  var date = new Date();
-  
-    console.log(date);
     models.incident
       .findAll ({
         where: {
@@ -56,5 +52,26 @@ router.get('/incidents', function(req, res) {
         res.json(incidents);
       });
   });
+});
+
+// get all incidents that occured in the last 4 hours
+// Returns all incidents ordered by date/time descending that occurred in the last 4 hours.
+router.get('/incidents/latest', function(req, res) {
+
+  var date = new Date();
+  models.incident
+    .findAll ({
+      limit: 1000, order: 'date DESC',
+      where: {
+        date: {
+          gt: new Date(date.setHours(date.getHours() - 4))
+        }
+      }
+    })
+    .then(function(incidents) {
+      res.json(incidents);
+    });
+});
+
 
 module.exports = router;
