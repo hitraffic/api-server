@@ -19,8 +19,10 @@
 <li>type: Incident type as defined by GET /types</li>
 </ul>
 
-EXAMPLES:
-GET /incidents?from=2014-10-31T23:59:59Z - Fetch all incidents that happened since 10/31/2014 11:59:59PM.
+<d1>
+<dt>EXAMPLES:</dt>
+<dd>GET /incidents?from=2014-10-31T23:59:59Z - Fetch all incidents that happened since 10/31/2014 11:59:59PM.</dd>
+</d1>
 
 GET /incidents?from=2014-10-31T23:59:59Z&to=2015-01-01T00:00:00Z - Fetch all incidents that happened between 10/31/2014 11:59:59PM and 1/1/2015 12:00:00AM.
 
