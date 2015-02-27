@@ -20,7 +20,7 @@
 </ul>
 
 <d1>
-<dt>EXAMPLES:</dt>
+<dt><strong>EXAMPLES:</strong></dt>
 <dd>GET /incidents?from=2014-10-31T23:59:59Z - Fetch all incidents that happened since 10/31/2014 11:59:59PM.</dd>
 </d1>
 
@@ -43,39 +43,39 @@ __________________________________________________________________________
 ## GET /incidents/latest
 
 <d1>
-<dt>DESCRIPTION:</dt>
+<dt><strong>DESCRIPTION:</strong></dt>
 <dd>Get all incidents that occurred in the last 4 hours.</dd>
 
-<dt>SPECS:</dt>
+<dt><strong>SPECS:</strong></dt>
 <dd>Returns all incidents ordered by date/time descending that occurred in the last 4 hours.</dd>
 
-<dt>ROUTES:</dt>
+<dt><strong>ROUTES:</strong></dt>
 <dd>[incidents/latest](http://localhost:3000/api/incidents/latest)</dd>
 </d1>
 __________________________________________________________________________
 ## GET /areas
 
 <d1>
-<dt>DESCRIPTION:</dt>
+<dt><strong>DESCRIPTION:</strong></dt>
 <dd>Fetches all areas in the database.</dd>
 
-<dt>SPECS:</dt>
+<dt><strong>SPECS:</strong></dt>
 <dd>This should just return an array, i.e. [‘HONOLULU’, ‘KANEOHE’, ‘PEARL CITY’].</dd>
 <dd>The array should contain unique values, i.e., don’t list ‘Honolulu’ twice.</dd>
 
-<dt>ROUTES:</dt>
+<dt><strong>ROUTES:</strong></dt>
 __________________________________________________________________________
 ## GET /types
 
 <d1>
-<dt>DESCRIPTION:</dt>
+<dt><strong>DESCRIPTION:</strong></dt>
 <dd>Fetches all incident types.</dd>
 
-<dt>SPECS:</dt>
+<dt><strong>SPECS:</strong></dt>
 <dd>This should just return an array, i.e. [‘MOTOR VEHICLE COLLISION’, ‘HAZARDOUS DRIVER’, ‘STALLED/HAZARDOUS VEHICLE’, ‘TRAFFIC INCIDENT - NO COLLISION’, ‘TRAFFIC NUISANCE OR PARKING VIOLATION’].</dd>
 <dd>The array should contain unique values.</dd>
 
-<dt>ROUTES:</dt>
+<dt><strong>ROUTES:</strong></dt>
 <dd>[type/stalled](http://localhost:3000/api/type/stalled)</dd>
 <dd>[type/no-collision](http://localhost:3000/api/type/no-collision)</dd>
 <dd>[type/nuisance-violation](http://localhost:3000/api/type/nuisance-violation)</dd>
