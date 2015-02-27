@@ -8,7 +8,7 @@
 <dt><strong>DESCRIPTION:</strong></dt>
 <dd>The default route.</dd>
 
-<dt>SPECS:</dt>
+<dt><strong>SPECS:</strong></dt>
 >  URL may contain one or more of the following query parameters:
 </d1>
 
