@@ -1,0 +1,21 @@
+{
+  "name": "hitraffic-api",
+  "version": "1.0.0",
+  "description": "API for HiTraffic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node index.js"
+  },
+  "author": "George Lee",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^5.1.10",
+    "express": "^4.12.3",
+    "mongoose": "^4.0.1",
+    "morgan": "^1.5.2"
+  },
+  "devDependencies": {
+    "dotenv": "^1.1.0"
+  }
+}
