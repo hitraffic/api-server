@@ -1,13 +1,16 @@
 var mongoose = require('mongoose');
 var app = require('express')();
 var morgan = require('morgan');
+var cors = require('cors');
+
 mongoose.connect(process.env['MONGO_URL']);
 
 var Incident = require('./incidents');
 var v1Routes = require('./routes/v1');
 
-app.use('/v1', v1Routes);
+app.use(cors());
 app.use(morgan('combined'));
+app.use('/v1', v1Routes);
 
 function startServer(port) {
   app.listen(port, function () {
