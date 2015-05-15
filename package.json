@@ -1,29 +1,22 @@
 {
-  "name": "api-server",
+  "name": "hitraffic-api",
   "version": "1.0.0",
-  "description": "API Endpoint for Traffic Data",
+  "description": "API for HiTraffic",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hitraffic/api-server.git"
-  },
-  "author": "",
+  "author": "George Lee",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hitraffic/api-server/issues"
-  },
-  "homepage": "https://github.com/hitraffic/api-server",
   "dependencies": {
-    "debug": "^2.1.1",
-    "express": "^4.11.2",
-    "pg": "^4.2.0",
-    "sequelize": "^2.0.0-rc8"
+    "babel": "^5.1.10",
+    "cors": "^2.6.0",
+    "express": "^4.12.3",
+    "mongoose": "^4.0.1",
+    "morgan": "^1.5.2"
   },
   "devDependencies": {
-    "sequelize-cli": "^1.2.0"
+    "dotenv": "^1.1.0"
   }
 }
