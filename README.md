@@ -5,6 +5,8 @@ API Endpoint for Traffic Data
 
 * API Endpoint for Traffic Data
 
+Hosting is at http://api.hitraffic.org/v1
+
 ## GET /incidents
 
 <d1>
