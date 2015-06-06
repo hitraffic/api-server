@@ -43,20 +43,7 @@ __________________________________________________________________________
 <dd>Returns all motor vehicle incidents in 2 years.</dd>
 
 <dt><strong>ROUTES:</strong></dt>
-<dd>[incidents](http://localhost:3000/api/incidents/)</dd>
-</d1>
-__________________________________________________________________________
-## GET /incidents/latest
-
-<d1>
-<dt><strong>DESCRIPTION:</strong></dt>
-<dd>Get all incidents that occurred in the last 4 hours.</dd>
-
-<dt><strong>SPECS:</strong></dt>
-<dd>Returns all incidents ordered by date/time descending that occurred in the last 4 hours.</dd>
-
-<dt><strong>ROUTES:</strong></dt>
-<dd>[incidents/latest](http://localhost:3000/api/incidents/latest)</dd>
+<dd>[incidents](http://api.hitraffic.org/v1/incidents/)</dd>
 </d1>
 __________________________________________________________________________
 ## GET /areas
@@ -69,7 +56,6 @@ __________________________________________________________________________
 <dd>This should just return an array, i.e. [‘HONOLULU’, ‘KANEOHE’, ‘PEARL CITY’].</dd>
 <dd>The array should contain unique values, i.e., don’t list ‘Honolulu’ twice.</dd>
 
-<dt><strong>ROUTES:</strong></dt>
 __________________________________________________________________________
 ## GET /types
 
@@ -80,13 +66,6 @@ __________________________________________________________________________
 <dt><strong>SPECS:</strong></dt>
 <dd>This should just return an array, i.e. [‘MOTOR VEHICLE COLLISION’, ‘HAZARDOUS DRIVER’, ‘STALLED/HAZARDOUS VEHICLE’, ‘TRAFFIC INCIDENT - NO COLLISION’, ‘TRAFFIC NUISANCE OR PARKING VIOLATION’].</dd>
 <dd>The array should contain unique values.</dd>
-
-<dt><strong>ROUTES:</strong></dt>
-<dd>[type/stalled](http://localhost:3000/api/type/stalled)</dd>
-<dd>[type/no-collision](http://localhost:3000/api/type/no-collision)</dd>
-<dd>[type/nuisance-violation](http://localhost:3000/api/type/nuisance-violation)</dd>
-<dd>[type/collision](http://localhost:3000/api/type/collision)</dd>
-<dd>[type/hazardous](http://localhost:3000/api/type/hazardous)</dd>
 </d1>
 __________________________________________________________________________
 
