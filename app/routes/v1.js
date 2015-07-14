@@ -61,7 +61,7 @@ router.get('/incidents', (req, res) => {
   // Build params.
   let [query, limit] = buildQuery(req.query);
 
-  Incident.find(query).select('-_id -__v -geocode_response').sort('-date').limit(limit).exec((err, incidents) => {
+  Incident.find(query).select('-__v -geocode_response').sort('-date').limit(limit).exec((err, incidents) => {
     if (err) {
       throw err;
     }
